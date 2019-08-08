@@ -107,10 +107,10 @@ static void streaming_read_callback(struct ev_loop *loop, struct ev_io *watcher,
 		
 		  if (rdata != NULL) {
 
-		    // normal write
-		    //write(watcher->fd, rdata, rlen);					
+		    	// normal write
+		    	//write(watcher->fd, rdata, rlen);					
 		  
-		    // ansync write 
+		    	// ansync write 
 			  struct ev_io *write_watcher = (struct ev_io*) malloc (sizeof(struct ev_io));			
 			  if (write_watcher != NULL){
 			  
@@ -129,8 +129,8 @@ static void streaming_read_callback(struct ev_loop *loop, struct ev_io *watcher,
 			    ev_io_start(loop, write_watcher);
 			    printf("write callback start\n");
 			    return;
-        }
 			}
+		}
 	  }
 	}
 
